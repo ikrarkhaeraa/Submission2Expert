@@ -1,5 +1,6 @@
 package com.dicoding.tourismapp.core.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,7 @@ class TourismAdapter : RecyclerView.Adapter<TourismAdapter.ListViewHolder>() {
     private var listData = ArrayList<Tourism>()
     var onItemClick: ((Tourism) -> Unit)? = null
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(newListData: List<Tourism>?) {
         if (newListData == null) return
         listData.clear()
